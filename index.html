@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate AI skill definitions from user goals with structured JSON, test cases, and rating system">
+    <meta name="keywords" content="AI skill generator, goal-based skill creation, JSON skill definition, test cases, rating system">
+    <meta name="author" content="Skill Generator Team">
+    <title>Skill Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Skill Generator</h1>
+            <p>Enter a goal to generate an AI skill definition with structured JSON, test cases, and rating.</p>
+        </header>
+        <main>
+            <section class="input-section">
+                <label for="goalInput">Goal Description:</label>
+                <input type="text" id="goalInput" placeholder="e.g., write a poem about summer" aria-label="Enter your goal description">
+                <button id="generateBtn">Generate Skill</button>
+            </section>
+            <div id="message" aria-live="polite"></div>
+            <section class="filter-section">
+                <label for="filterInput">Filter by goal:</label>
+                <input type="text" id="filterInput" placeholder="Type to filter..." aria-label="Filter skills by goal">
+                <label for="ratingFilter">Minimum rating:</label>
+                <select id="ratingFilter" aria-label="Select minimum skill rating">
+                    <option value="0">All</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                    <option value="5">5</option>
+                </select>
+            </section>
+            <section id="skillsList" class="skills-list"></section>
+        </main>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
